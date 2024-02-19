@@ -1,16 +1,117 @@
 ---
-
+import Main from "@/layouts/Main.astro";
+import Friend from "@/components/Friend.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Main>
+  <div class="name" style="line-height: 1ch;">
+    <span class="title">yusof's space</span>
+    <p>a place for friends</p>
+  </div>
+  <div class="container">
+    <div class="profile box">
+      <div class="name" style="line-height: 2ch;">
+        <div class="title-box">
+          <marquee>
+            <span class="title">yusof</span>
+          </marquee>
+          <hr />
+        </div>
+        <p>
+          hi, im an arabian software developer that codes random things, that no
+          one wants
+        </p>
+      </div>
+      <p style="line-height: 2ch;">
+        so uhh, i dont know what to talk about here, so I am going to ramble
+        about chocolate eggs, and why they are so good:
+      </p>
+      <p>
+        Ah, <b>chocolate eggs</b>, the epitome of indulgence and delight!
+        There's something truly magical about these sweet, delectable treats
+        that captivates our taste buds and brings joy to our hearts. Let's
+        embark on a whimsical journey through the enchanting world of chocolate
+        eggs.
+      </p>
+      <img src="https://wavesmiley.com/wavesmiley.gif" width="128" alt="wavesmiley">
+    </div>
+    <div class="projects box">
+      <div class="title-box">
+        <marquee>
+          <span class="title">projects</span>
+        </marquee>
+        <hr />
+      </div>
+      <div class="box">
+        <span style="font-size: 24px;">spaceness</span>
+        <p>i dont consider this a project, instead this is an organization, but most of the projects I work on are in there</p>
+        <a href="//spaceness.one">go to</a>
+      </div>
+    </div>
+    <div class="friends box">
+      <div class="title-box">
+        <marquee>
+          <span class="title">friends</span>
+        </marquee>
+        <hr />
+      </div>
+      <div class="friends-list" style="display: flex; flex-wrap: wrap; max-width: 35ch; gap:1ch;">
+        <Friend name="caffeinatedcharlie" url="https://github.com/caffeinatedcharlie" pfp="https://avatars.githubusercontent.com/u/148908691?v=4"/>
+        <Friend name="asour" url="https://github.com/asour8" pfp="https://avatars.githubusercontent.com/u/52638772?v=4"/>
+        <Friend name="rare1k" url="https://github.com/uhidontkno" pfp="https://avatars.githubusercontent.com/u/86028086?v=4"/>
+      </div>
+    </div>
+  </div>
+</Main>
+
+<style lang="scss">
+  .title {
+    font-size: 32px;
+  }
+
+  .title-box {
+    color: rgb(0, 0, 0);
+    padding: 5px;
+
+    & > hr {
+      border: 1px solid black;
+    }
+  }
+
+  :root {
+    margin: auto;
+    max-width: 75ch;
+    padding: 20px;
+    background-color: rgb(131, 157, 230);
+  }
+
+  .box {
+    border: 3px solid rgb(0, 0, 0);
+    padding: 8px;
+    background-color: rgb(255,255,255);
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr 1fr;
+    grid-template-rows: 1.2fr 0.8fr;
+    gap: 18px 18px;
+    grid-auto-flow: row dense;
+    grid-template-areas:
+      "profile projects projects"
+      "profile friends friends";
+    height: 55ch;
+  }
+
+  .profile {
+    grid-area: profile;
+  }
+
+  .projects {
+    grid-area: projects;
+  }
+
+  .friends {
+    grid-area: friends;
+  }
+</style>

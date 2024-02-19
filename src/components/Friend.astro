@@ -1,0 +1,22 @@
+---
+interface Props {
+  url: string;
+  name: string;
+  pfp: string;
+}
+
+const { url, name, pfp } = Astro.props;
+---
+
+<a href={url} class="friend">
+    <img src={pfp} style="text-align: center;" width="64"  alt="friend pfp">
+    <br>
+    <span style="text-align: center; text-wrap: balance; max-width:1ch;">{name}</span>
+</a>
+
+<style lang="scss">
+  .friend {
+    color: black;
+    text-align: center;
+  }
+</style>
