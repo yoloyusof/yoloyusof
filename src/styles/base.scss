@@ -1,8 +1,14 @@
 @font-face {
-    font-family: "Verdana Bold";
-    src: url("/verdanab.ttf");
+    font-family: "Verdana";
+    src: url("/verdana.ttf");
+}
+
+@font-face {
+    font-family: "Verdana";
+    src: url("/verdana-bold.ttf");
+    font-weight: bold;
 }
 
 :root {
-    font-family: "Verdana Bold", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: "Verdana", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }

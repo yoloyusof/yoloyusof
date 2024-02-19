@@ -4,10 +4,14 @@ import Friend from "@/components/Friend.astro";
 ---
 
 <Main>
-  <div class="name" style="line-height: 1ch;">
-    <span class="title">yusof's space</span>
-    <p>a place for friends</p>
+  <div class="top" style="line-height: 1ch; display: flex; justify-content: center; align-items: center; text-align: center;">  
+    <img src="/myspace.svg" width="64" alt="myspace logo">
+    <div class="name">
+      <span class="title">yusof's space</span>
+      <p>a place for friends</p>
+    </div>
   </div>
+  <br>
   <div class="container">
     <div class="profile box">
       <div class="name" style="line-height: 2ch;">
@@ -69,6 +73,7 @@ import Friend from "@/components/Friend.astro";
 <style lang="scss">
   .title {
     font-size: 32px;
+    font-weight: bold;
   }
 
   .title-box {
@@ -82,9 +87,9 @@ import Friend from "@/components/Friend.astro";
 
   :root {
     margin: auto;
-    max-width: 75ch;
+    max-width: 95ch;
     padding: 20px;
-    background-color: rgb(131, 157, 230);
+    background-color: #2596be;
   }
 
   .box {
